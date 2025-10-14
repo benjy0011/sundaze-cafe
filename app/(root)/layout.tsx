@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar"
 import { ReactNode } from "react"
 
 const Layout = ({
@@ -5,6 +6,7 @@ const Layout = ({
 }: Readonly<{ children: ReactNode }>) => {
   return (
     <main className="font-bagel-fat-one">
+      <Navbar />
       {children}
     </main>
   )
