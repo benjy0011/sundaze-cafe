@@ -63,7 +63,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: oklch(97.015% 0.00011 271.152 / 0.093);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -136,6 +136,93 @@
   }
 
   .intro-section {
-    @apply w-full h-dvh min-h-[30rem] bg-background flex flex-row;
+    @apply w-full lg:h-dvh min-h-[30rem] bg-background flex flex-row max-lg:flex-col;
+  }
+
+  .visual-section {
+    @apply bg-foreground text-background font-playfair-display py-10
+  }
+
+  .visual-section-h2 {
+    @apply relative text-2xl lg:text-4xl font-semibold text-center inline-block
+          
+    after:content-[''] after:absolute after:lg:h-[3px] after:h-[2px] after:bottom-[-1.5rem] after:lg:bottom-[-2rem] after:left-1/2 after:-translate-x-1/2 after:w-[4rem] after:lg:w-[6rem] after:bg-current
+
+
+  }
+
+  .visual-section-h2-div {
+    @apply w-full flex justify-center
+  }
+
+
+  /* Animation */
+  .hover-underline {
+    position: relative;
+    display: inline-block;
+    /* text-decoration: none; */
+  }
+
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor; /* Uses text color */
+    transition: width 0.3s ease;
+  }
+
+  .hover-underline-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  .hover-underline:hover::after {
+    width: 100%;
   }
 }
+
+
+
+/* 🌐 GLOBAL SCROLLBAR STYLING */
+html {
+  scrollbar-width: none; /* Firefox */
+  scrollbar-color: black transparent; /* thumb, track */
+}
+
+/* ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  scrollbar-color: #000000 transparent;
+}
+
+html:hover {
+  scrollbar-color: #000000 transparent;
+}
+
+html:hover::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9095A1;
+} */

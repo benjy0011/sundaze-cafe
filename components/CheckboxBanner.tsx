@@ -18,7 +18,7 @@ const CheckboxBanner = () => {
       : lg
       ? "grid-cols-16"
       : xl
-      ? "grid-cols-16"
+      ? "grid-cols-32"
       : "grid-cols-32"
   }, [xs, sm, md, lg, xl])
 
