@@ -6,8 +6,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import LogoLoop from "@/components/LogoLoop";
-import { VISUAL_ITEMS } from "@/lib/constants";
+import { SIGNATURES, SMALL_REVIEWS, VISUAL_ITEMS } from "@/lib/constants";
 import { useWindowSize } from "@/hooks/useScreenSize";
+import ReviewCardBig from "@/components/ReviewCardBig";
+import ReviewCardSmall from "@/components/ReviewCardSmall";
 
 export default function Home() {
   const { xs, sm, md } = useWindowSize();
@@ -52,7 +54,7 @@ export default function Home() {
 
       <CheckboxBanner />
       
-      <section id="intro-section" className="intro-section">
+      <section id="intro" className="intro-section">
         <div className="h-full max-lg:flex-[0.5] flex-[1] max-lg:p-10">
           <img
             className="w-full h-full object-cover rounded-xl"
@@ -73,13 +75,13 @@ export default function Home() {
               <img
                 src="/Info-plate.png"
                 alt="Plate"
-                className="h-[15vw] lg:h-[50%] w-auto"
+                className="h-[15vw] lg:h-[8vw] w-auto"
               />
 
               <img
                 src="/Info-bread.png"
                 alt="Bread"
-                className="h-[10vw] lg:h-[40%] w-auto rotate-10 translate-x-7 max-lg:translate-x-1 -translate-y-10 max-lg:-translate-y-5"
+                className="h-[10vw] lg:h-[6vw] w-auto rotate-10 translate-x-7 max-lg:translate-x-1 -translate-y-10 max-lg:-translate-y-5"
               />
             </div>
           </div>
@@ -87,7 +89,7 @@ export default function Home() {
       </section>
 
 
-      <section id="visual-section" className="visual-section">
+      <section id="visual" className="visual-section">
 
         <div className="visual-section-h2-div">
           <h2 className="visual-section-h2 mt-10 lg:mt-15">
@@ -103,10 +105,58 @@ export default function Home() {
           className="my-30 lg:my-45"
         />
 
-        <div className="visual-section-h2-div">
+        <div className="visual-section-h2-div relative">
           <h2 className="visual-section-h2">
             OUR SIGNATURES
           </h2>
+        </div>
+
+        <img
+          src="/star-3.png"
+          alt="decoration-star"
+          className="absolute right-[15rem] max-lg:right-[2rem] max-lg:size-15 -rotate-16 -translate-y-8"
+        />
+
+        <div className="flex max-lg:flex-col flex-row max-lg:items-center justify-between mt-[7rem] mx-[5rem] gap-10">
+          {SIGNATURES.map(( { src, alt }, index ) => (
+            <div key={`${alt}-${index}`} className="flex-1 lg:hover:-translate-y-7 max-lg:hover:scale-105 transition-transform duration-700">
+              <img
+                src={src}
+                alt={alt}
+                className="object-cover max-lg:w-[20rem] w-[100%] max-lg:h-[20rem] h-[100%] rounded-2xl"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="w-full flex justify-start mt-15 mb-20 max-lg:h-10">
+          <img
+            src="/star-1.png"
+            alt="decoration-star"
+            className="px-20 rotate-160"
+          />
+        </div>
+      </section>
+
+      <CheckboxBanner />
+
+      <section id="reviews" className="reviews-section">
+        <div className="visual-section-h2-div pt-10 py-15 lg:pt-15 lg:py-20">
+          <h2 className="visual-section-h2">
+            REVIEWS
+          </h2>
+        </div>
+
+        <div className="flex max-lg:flex-col-reverse max-lg:gap-5">
+          <div className="flex-1 flex flex-col gap-4 justify-between">
+            {SMALL_REVIEWS.slice(0, 3).map(( review, idx) => (
+              <ReviewCardSmall key={`${review.name}-${idx}`} {...review} />
+            ))}
+          </div>
+
+          <div className="flex-1 max-lg:mx-15">
+            <ReviewCardBig />
+          </div>
         </div>
       </section>
     </>

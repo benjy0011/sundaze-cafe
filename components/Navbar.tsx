@@ -29,6 +29,7 @@ const Navbar = () => {
           alt="logo"
           width={70}
           height={70}
+          className="ml-4"
         />
 
         <Drawer.Root direction="right">
@@ -46,7 +47,7 @@ const Navbar = () => {
             <Drawer.Overlay className="fixed inset-0 bg-black/40" />
 
             <Drawer.Content
-              className="right-2 top-2 bottom-2 fixed z-10 outline-none w-[300px] flex"
+              className="right-1 top-2 bottom-2 fixed z-10 outline-none w-[300px] flex"
               style={{ '--initial-transform': 'calc(100% + 8px)' } as React.CSSProperties}
             >
               <Drawer.Title>
