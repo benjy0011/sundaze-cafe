@@ -169,6 +169,16 @@
     @apply w-full bg-custom-dark-brown text-background
   }
 
+  .about-us-intro {
+    @apply w-full lg:min-h-dvh bg-background text-foreground flex flex-col items-center
+  }
+
+  .vision-mission {
+    @apply w-full bg-foreground text-background py-10 lg:py-20
+  }
+
+  
+
 
   /* Animation */
   .hover-underline {
@@ -200,6 +210,42 @@
 
   .hover-underline:hover::after {
     width: 100%;
+  }
+
+  #signature-imgs img {
+    will-change: transform, opacity;
+  }
+
+  @keyframes drawBorder {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dashoffset: 50;
+    }
+
+    100% {
+      stroke-dashoffset: 100;
+    }
+  }
+
+  .animated-border rect {
+    animation: drawBorder 10s linear infinite;
+  }
+
+  @keyframes fadeAppear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 100;
+    }
+  }
+
+  .appear-onload {
+    animation: fadeAppear 1.3s linear;
   }
 }
 

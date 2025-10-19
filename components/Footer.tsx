@@ -22,7 +22,7 @@ const Footer = () => {
               <Link
                 href={href}
                 key={`${index}-${name}`}
-                className="text-white font-extrabold max-md:text-sm max-lg:text-md text-lg py-1 lg:py-2 rounded-xl font-playfair-display hover:underline"
+                className="text-white font-extrabold max-md:text-xs max-lg:text-sm text-md py-1 lg:py-2 rounded-xl font-playfair-display hover:underline"
               >
                 {name}
               </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={`${index}-${label}`}
-                className="text-white max-md:text-sm max-lg:text-md text-lg py-1 lg:py-2 rounded-xl font-nunito-sans hover:underline flex gap-2 items-center"
+                className="text-white max-md:text-xs max-lg:text-sm text-md py-1 lg:py-2 rounded-xl font-nunito-sans hover:underline flex gap-2 items-center"
               >
                 <FontAwesomeIcon icon={icon} size="lg" />
                 <p>{label}</p>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="bg-background w-full text-center py-1 font-nunito-sans">
-        © Copyright 2025
+        © 2025 Sundaze Coffee. All rights reserved.
       </div>
     </>
   )

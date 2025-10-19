@@ -1,3 +1,4 @@
+import { AboutUsCardProps } from "@/components/AboutUsCard"
 import { LogoItem } from "@/components/LogoLoop"
 import { ReviewCardSmallProps } from "@/components/ReviewCardSmall"
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -104,4 +105,30 @@ export const SOCIAL_MEDIA = [
     label: "@sundaze.coffee",
     link: "https://www.instagram.com/sundazecoffee_/reels/?hl=en"
   }
+]
+
+export const SUNDAZE_BANNER_ITEMS: LogoItem[] = [
+  {
+    src: '/Sundaze-Coffee-text.png',
+    alt: "sundaze coffee",
+  },
+  {
+    src: '/star-0.png',
+    alt: "star",
+  }
+]
+
+export const MISSION_VISION: AboutUsCardProps[] = [
+  {
+    imgSrc: "/Eye-img.png",
+    imgAlt: "Vision",
+    title: "Our Vision",
+    description: "To craft moments of warmth and connection through thoughtfully brewed coffee, comforting food, and heartfelt service — creating a space where everyone feels at home.",
+  },
+  {
+    imgSrc: "/Bulleye-img.png",
+    imgAlt: "Mission",
+    title: "Our Mission",
+    description: "To become Klang’s most loved lifestyle café — a sanctuary where people slow down, connect, and find inspiration in every sip and bite.",
+  },
 ]

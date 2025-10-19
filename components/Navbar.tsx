@@ -10,7 +10,10 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 
-const Navbar = () => {
+const Navbar = ({
+  mode = "light",
+  absolute = true,
+}: { mode?: "dark" | "light", absolute?: boolean }) => {
   const { xs } = useWindowSize();
   const pathname = usePathname();
 
@@ -23,9 +26,9 @@ const Navbar = () => {
   return (
     xs
     ? (
-      <nav className="absolute z-1 flex w-full border-b-2 justify-between" >
+      <nav className={cn("z-1 flex w-full border-b-2 justify-between", mode==="dark" && "border-foreground", absolute && "absolute")} >
         <Image 
-          src="/Sundaze-logo.png"
+          src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
           alt="logo"
           width={70}
           height={70}
@@ -35,7 +38,7 @@ const Navbar = () => {
         <Drawer.Root direction="right">
           <Drawer.Trigger asChild>
             <Button
-              className="text-white hover:text-white self-center mr-3"
+              className={cn("self-center mr-3", mode==="light" ? "text-white hover:text-white" : "text-foreground hover:text-foreground" )}
               size="icon-lg"
               variant="ghost"
             >
@@ -50,7 +53,7 @@ const Navbar = () => {
               className="right-1 top-2 bottom-2 fixed z-10 outline-none w-[300px] flex"
               style={{ '--initial-transform': 'calc(100% + 8px)' } as React.CSSProperties}
             >
-              <Drawer.Title>
+              <Drawer.Title className="invisible">
                 Menu
               </Drawer.Title>
 
@@ -74,9 +77,9 @@ const Navbar = () => {
 
       </nav>
     ) : (
-      <nav className="font-playfair-display absolute z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18">
+      <nav className={cn("font-playfair-display z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18", mode==="dark" && "border-foreground", absolute && "absolute" )}>
         <Image 
-          src="/Sundaze-logo.png"
+          src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
           alt="logo"
           width={80}
           height={80}
@@ -87,7 +90,8 @@ const Navbar = () => {
             href={href}
             key={`${index}-${name}`}
             className={cn(
-              "text-white font-extrabold max-md:text-md max-lg:text-lg text-xl hover-underline",
+              "font-extrabold max-sm:text-xs max-md:text-md max-lg:text-lg text-xl hover-underline",
+              mode==="light" ? "text-white" : "text-foreground",
               isActive(href) && "hover-underline-active"
             )}
           >
