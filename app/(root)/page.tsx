@@ -56,7 +56,7 @@ export default function Home() {
     const tlSignatureImages = gsap.timeline({
       scrollTrigger: {
         trigger: "#signature-imgs",
-        start: "top 40%",
+        start: "top 55%",
       }
     });
 
@@ -76,7 +76,7 @@ export default function Home() {
     const tlReviews = gsap.timeline({
       scrollTrigger: {
         trigger: "#reviews",
-        start: "top 40%",
+        start: "top 30%",
       }
     });
 
