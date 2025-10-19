@@ -4,7 +4,7 @@ const ReviewCardBig = ({
 
 }) => {
   return (
-    <div className="w-full max-lg:h-50 h-100 bg-custom-brown rounded-xl flex border-2 p-4 gap-2">
+    <div className="w-full max-lg:h-50 h-100 bg-custom-brown rounded-xl flex p-4 gap-2">
       <img
         src="/review-1.jpg"
         alt="review"
