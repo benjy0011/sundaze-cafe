@@ -1,6 +1,7 @@
 import { AboutUsCardProps } from "@/components/AboutUsCard"
 import { LogoItem } from "@/components/LogoLoop"
 import { ReviewCardSmallProps } from "@/components/ReviewCardSmall"
+import { TwoColMasonryItemProps } from "@/components/TwoColMasonry"
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export const NAV_LINKS = [
@@ -131,4 +132,55 @@ export const MISSION_VISION: AboutUsCardProps[] = [
     title: "Our Mission",
     description: "To become Klang’s most loved lifestyle café — a sanctuary where people slow down, connect, and find inspiration in every sip and bite.",
   },
+]
+
+export const GALLERY_IMAGES: TwoColMasonryItemProps[] = [
+  {
+    src: "/gallery-many-breads.png",
+    alt: "Breads",
+    width: 633,
+    height: 456,
+  },
+  {
+    src: "/gallery-some-breads.png",
+    alt: "Bread",
+    width: 531,
+    height: 280,
+  },
+  {
+    src: "/gallery-coffee.png",
+    alt: "Coffee",
+    width: 529,
+    height: 560,
+  },
+  {
+    src: "/gallery-barista-woman.png",
+    alt: "Barista",
+    width: 633,
+    height: 558,
+  },
+  {
+    src: "/gallery-christmas-deco.png",
+    alt: "Christmas Deco",
+    width: 529,
+    height: 780,
+  },
+  {
+    src: "/gallery-some-breads.png",
+    alt: "Bread",
+    width: 653,
+    height: 279,
+  },
+  {
+    src: "/gallery-barista-woman.png",
+    alt: "Barista",
+    width: 634,
+    height: 558,
+  },
+  // {
+  //   src: "/gallery-some-breads.png",
+  //   alt: "Bread",
+  //   width: 532,
+  //   height: 280,
+  // },
 ]

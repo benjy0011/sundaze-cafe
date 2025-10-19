@@ -177,7 +177,9 @@
     @apply w-full bg-foreground text-background py-10 lg:py-20
   }
 
-  
+  .gallery-main {
+    @apply w-full h-dvh bg-foreground text-background flex flex-col justify-center items-center
+  }
 
 
   /* Animation */
@@ -245,7 +247,7 @@
   }
 
   .appear-onload {
-    animation: fadeAppear 1.3s linear;
+    animation: fadeAppear 2s ease-in-out;
   }
 }
 
