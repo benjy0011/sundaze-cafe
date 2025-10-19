@@ -76,7 +76,7 @@ export default function Home() {
     const tlReviews = gsap.timeline({
       scrollTrigger: {
         trigger: "#reviews",
-        start: "top 25%",
+        start: "top top",
       }
     });
 
@@ -95,6 +95,14 @@ export default function Home() {
         stagger: 0.05,
         delay: 0.02,
       })
+
+    const handleLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
 
   }, [])
 

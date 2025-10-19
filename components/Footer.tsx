@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Footer = () => {
   return (
     <>
-      <footer className="footer flex gap-5 lg:gap-10">
-        <div className="flex-[1] flex h-full items-center justify-center">
+      <footer className="footer flex gap-5 lg:gap-10 justify-around py-6">
+        <div className="flex h-full items-center justify-center">
           <img
             src="Sundaze-logo.png"
             alt="Sundaze Logo"
@@ -15,7 +15,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex flex-2 w-full my-5 justify-around lg:justify-end mx-2 lg:mr-50 lg:gap-50">
+        {/* <div className="flex flex-1 w-full my-5 justify-around lg:justify-end mx-2 lg:mr-50 lg:gap-50"> */}
           <div className="flex flex-col">
             <h6 className="text-lg lg:text-2xl mb-2 lg:mb-4">Quick Links</h6>
             {NAV_LINKS.map(({ name, href }, index) => (
@@ -45,9 +45,9 @@ const Footer = () => {
             ))}
           </div>
           
-        </div>
+        {/* </div> */}
       </footer>
-      <div className="bg-background w-full text-center py-1 font-nunito-sans">
+      <div className="text-xs sm:text-sm md:text-md lg:text-lg  bg-background w-full text-center py-1 font-nunito-sans">
         © 2025 Sundaze Coffee. All rights reserved.
       </div>
     </>

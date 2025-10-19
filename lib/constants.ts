@@ -184,3 +184,51 @@ export const GALLERY_IMAGES: TwoColMasonryItemProps[] = [
   //   height: 280,
   // },
 ]
+
+export const MENU_COFFEE: LogoItem[] = [
+  {
+    src: '/menu-coffee-1.png',
+    alt: "coffee",
+  },
+  {
+    src: '/menu-coffee-2.png',
+    alt: "coffee",
+  },
+  {
+    src: '/menu-coffee-3.png',
+    alt: "coffee",
+  },
+  {
+    src: '/menu-coffee-4.png',
+    alt: "coffee",
+  },
+  {
+    src: '/menu-coffee-5.png',
+    alt: "coffee",
+  },
+  {
+    src: '/menu-coffee-6.png',
+    alt: "coffee",
+  },
+  // {
+  //   src: '/menu-coffee-7.png',
+  //   alt: "coffee",
+  // },
+]
+
+export const MENU_MAIN_IMG = [
+  {
+    src: "/menu-main-1.png",
+    alt: "Big breakfast",
+    width: 733,
+    height: 757,
+    text: "Brunch/ Dinner",
+  },
+  {
+    src: "/menu-main-2.png",
+    alt: "Croissants and coffee",
+    width: 733,
+    height: 757,
+    text: "Desserts / Drinks",
+  },
+]
