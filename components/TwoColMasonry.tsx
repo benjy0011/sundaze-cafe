@@ -82,7 +82,7 @@ const TwoColMasonry = ({
         {leftCol.map((right, idx) => (
           <Image 
             key={`${right.alt}-${idx}`}
-            className="w-[30vw] h-auto"
+            className="w-[40vw] lg:w-[30vw] h-auto"
             {...right}
           />
         ))}
@@ -93,7 +93,7 @@ const TwoColMasonry = ({
         {rightCol.map((right, idx) => (
           <Image 
             key={`${right.alt}-${idx}`}
-            className="two-col-masonry-img w-[30vw] h-auto"
+            className="w-[40vw] lg:w-[30vw] h-auto"
             {...right}
           />
         ))}
