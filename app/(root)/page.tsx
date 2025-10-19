@@ -74,7 +74,7 @@ export default function Home() {
     const tlReviews = gsap.timeline({
       scrollTrigger: {
         trigger: "#reviews",
-        start: "top 50%",
+        start: "top 40%",
       }
     });
 
