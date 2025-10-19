@@ -10,6 +10,7 @@ import { SIGNATURES, SMALL_REVIEWS, VISUAL_ITEMS } from "@/lib/constants";
 import { useWindowSize } from "@/hooks/useScreenSize";
 import ReviewCardBig from "@/components/ReviewCardBig";
 import ReviewCardSmall from "@/components/ReviewCardSmall";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -17,6 +18,7 @@ export default function Home() {
   const { xs, sm, md } = useWindowSize();
   const isSmallScreen = xs || sm || md;
 
+  const router = useRouter();
 
   useGSAP(() => {
     const homePageh1 = new SplitText("#home-page-h1", { type: "chars" });
@@ -107,6 +109,7 @@ export default function Home() {
               className="font-playfair-display hover:cursor-pointer"
               variant="secondary"
               size="xl"
+              onClick={() => router.push('about-us')}
             >
               <p className="-mt-1 text-foreground">About Us</p>
             </Button>
