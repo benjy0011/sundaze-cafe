@@ -4,12 +4,14 @@ import { Button } from "@/components/animate-ui/components/buttons/button";
 import CheckboxBanner from "@/components/CheckboxBanner";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
+import { ScrollTrigger, SplitText } from "gsap/all"
 import LogoLoop from "@/components/LogoLoop";
 import { SIGNATURES, SMALL_REVIEWS, VISUAL_ITEMS } from "@/lib/constants";
 import { useWindowSize } from "@/hooks/useScreenSize";
 import ReviewCardBig from "@/components/ReviewCardBig";
 import ReviewCardSmall from "@/components/ReviewCardSmall";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Home() {
   const { xs, sm, md } = useWindowSize();
@@ -31,8 +33,68 @@ export default function Home() {
       duration: 0.8,
       ease: 'bounce.out',
       stagger: 0.05
-    })
-  })
+    });
+
+
+    const tlIntro = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#intro",
+        start: "top 70%",
+      }
+    });
+
+    tlIntro.from( ["#intro-img-div", "#intro-title", "#intro-description", "#intro-food-img"], {
+      opacity: 0,
+      duration: 1.5,
+      ease: 'power1.inOut',
+      stagger: 0.3
+    });
+
+
+    const tlSignatureImages = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#signature-imgs",
+        start: "top 40%",
+      }
+    });
+
+    tlSignatureImages.from( "#signature-imgs img" , {
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: 'power2.inOut',
+      stagger: {
+        each: 0.25,
+        ease: "power1.out",
+        from: "start"
+      },
+    });
+
+
+    const tlReviews = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#reviews",
+        start: "top 50%",
+      }
+    });
+
+    tlReviews
+      .from("#big-review-div > *", {
+        x: "100%",
+        opacity: 0,
+        duration: 0.6,
+        ease: "power1.in"
+      })
+      .from("#small-review-div > *", {
+        y: "50%",
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.inOut",
+        stagger: 0.05,
+        delay: 0.02,
+      })
+
+  }, [])
 
   return (
     <>
@@ -55,7 +117,7 @@ export default function Home() {
       <CheckboxBanner />
       
       <section id="intro" className="intro-section">
-        <div className="h-full max-lg:flex-[0.5] flex-[1] max-lg:p-10">
+        <div id="intro-img-div" className="h-full max-lg:flex-[0.5] flex-[1] max-lg:p-10">
           <img
             className="w-full h-full object-cover rounded-xl"
             src="/Info-img.jpg"
@@ -65,13 +127,13 @@ export default function Home() {
 
         <div className="h-full flex-[1] relative max-lg:py-2">
           <div className="h-full flex flex-col items-start justify-center max-lg:gap-10 gap-0">
-            <h2 className="max-lg:text-3xl text-[min(4vw,3.5rem)] font-playfair-display font-bold max-lg:px-12 px-18 lg:pt-[15vh] lg:pb-[10vh]">Sundaze Coffee</h2>
+            <h2 id="intro-title" className="max-lg:text-3xl text-[min(4vw,3.5rem)] font-playfair-display font-bold max-lg:px-12 px-18 lg:pt-[15vh] lg:pb-[10vh]">Sundaze Coffee</h2>
 
-            <article className="font-normal font-nunito-sans italic max-lg:text-xl text-[min(2vw,1.7rem)] max-lg:px-12 px-18">
+            <article id="intro-description" className="font-normal font-nunito-sans italic max-lg:text-xl text-[min(2vw,1.7rem)] max-lg:px-12 px-18">
               Nestled in the heart of Klang, Sundaze Coffee is a cozy hideaway where minimalist design meets comforting flavors. From artisanal coffee to hearty brunches, every visit is a warm, sunlit escape made for slowing down and savoring the moment.”
             </article>
 
-            <div className="flex-1 flex w-full h-full justify-between items-end overflow-hidden z-1 max-lg:px-12">
+            <div id="intro-food-img" className="flex-1 flex w-full h-full justify-between items-end overflow-hidden z-1 max-lg:px-12">
               <img
                 src="/Info-plate.png"
                 alt="Plate"
@@ -117,10 +179,11 @@ export default function Home() {
           className="absolute right-[15rem] max-lg:right-[2rem] max-lg:size-15 -rotate-16 -translate-y-8"
         />
 
-        <div className="flex max-lg:flex-col flex-row max-lg:items-center justify-between mt-[7rem] mx-[5rem] gap-10">
+        <div id="signature-imgs" className="flex max-lg:flex-col flex-row max-lg:items-center justify-between mt-[7rem] mx-[5rem] gap-10">
           {SIGNATURES.map(( { src, alt }, index ) => (
-            <div key={`${alt}-${index}`} className="flex-1 lg:hover:-translate-y-7 max-lg:hover:scale-105 transition-transform duration-700">
+            <div key={`${alt}-${index}`} className="flex-1">
               <img
+                loading="lazy"
                 src={src}
                 alt={alt}
                 className="object-cover max-lg:w-[20rem] w-[100%] max-lg:h-[20rem] h-[100%] rounded-2xl"
@@ -148,13 +211,13 @@ export default function Home() {
         </div>
 
         <div className="flex max-lg:flex-col-reverse max-lg:gap-5">
-          <div className="flex-1 flex flex-col gap-4 justify-between">
+          <div id="small-review-div" className="flex-1 flex flex-col gap-4 justify-between">
             {SMALL_REVIEWS.slice(0, 3).map(( review, idx) => (
               <ReviewCardSmall key={`${review.name}-${idx}`} {...review} />
             ))}
           </div>
 
-          <div className="flex-1 max-lg:mx-15">
+          <div id="big-review-div" className="flex-1 max-lg:mx-15">
             <ReviewCardBig />
           </div>
         </div>

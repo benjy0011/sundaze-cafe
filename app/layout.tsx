@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { Bagel_Fat_One, Playfair_Display, Nunito_Sans, Bebas_Neue, Montserrat } from "next/font/google";
 import "./globals.css";
-import gsap from "gsap"
-import { ScrollTrigger, SplitText } from "gsap/all"
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 // Prevent Font Awesome from inserting its own <style> tag:
 config.autoAddCss = false
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const bagelFatOne = Bagel_Fat_One({
   weight: "400",
