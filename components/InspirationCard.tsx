@@ -94,7 +94,7 @@ const InspirationCard = () => {
           className="h-50 lg:h-full w-auto aspect-square"
         />
 
-        <p className="flex-1 font-nunito-sans text-xl lg:text-2xl text-left max-lg:py-5">
+        <p className="flex-1 font-nunito-sans text-xl lg:text-2xl text-center lg:text-left max-lg:py-5">
           Sundaze Coffee is inspired by slow mornings and meaningful connections, offering good coffee, comforting food, and a warm space to savor each moment.
         </p>
       </div>

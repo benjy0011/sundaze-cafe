@@ -13,12 +13,12 @@ const Page = () => {
         <Navbar absolute={false} />
         <div className="flex-1 w-full h-full flex items-center justify-center bg-[url(/Gallery-bg.png)] bg-cover overflow-hidden bg-black/50 lg:bg-black/20 bg-blend-overlay lg:mt-10">
 
-          <div className="lg:bg-foreground h-full w-[50vw] lg:w-[30vw] flex justify-center items-center px-[5vw] pb-10">
+          <div className="lg:bg-foreground h-full w-[50vw] lg:w-[30vw] flex justify-center items-center lg:px-[4vw] pb-10">
             <Image
               src="/Gallery-main.png"
               alt="Gallery"
-              width={337}
-              height={451}
+              width={387}
+              height={501}
               className="appear-onload"
             />  
           </div>  

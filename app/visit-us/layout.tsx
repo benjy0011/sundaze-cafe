@@ -6,7 +6,7 @@ const Layout = ({
   children
 }: Readonly<{ children: ReactNode }>) => {
   return (
-    <main className="font-bagel-fat-one">
+    <main className="font-bagel-fat-one overflow-hidden">
       <Navbar absolute={false} mode="dark" />
       {children}
       <Footer />

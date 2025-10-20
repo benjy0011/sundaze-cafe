@@ -209,6 +209,19 @@
     @apply font-bold text-base sm:text-lg lg:text-xl
   }
 
+  .input-wrapper {
+    @apply relative w-full after:content-[''] after:absolute after:h-[2px] after:bottom-[-1px] after:left-0 after:w-[100%] after:bg-foreground after:-translate-y-1 after:transition-transform after:duration-300 focus-within:after:translate-y-0
+  }
+
+  .input {
+    @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
+
+    focus:outline-0 focus:ring-0 py-1 font-playfair-display w-full
+  }
+
+  .textfield {
+    @apply focus:outline-0 resize-none w-full font-playfair-display
+  }
 
   /* Animation */
   .hover-underline {

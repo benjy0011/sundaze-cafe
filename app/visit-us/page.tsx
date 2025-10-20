@@ -77,13 +77,15 @@ const Page = () => {
 
               <div className="flex-1">
                 <h6 className="contact-us-form-label">Message</h6>
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  rows={3}
-                  className="focus:outline-0 resize-none border-b-2 border-foreground w-full font-playfair-display"
-                />
+                <div className="input-wrapper">
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    rows={3}
+                    className="textfield"
+                  />
+                </div>
               </div>
 
               <div className="w-full flex justify-end">

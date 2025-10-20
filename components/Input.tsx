@@ -10,17 +10,17 @@ const Input = ({
   ...props
 }: InputProps) => {
   return (
-    <input
-      onWheel={(e) => e.currentTarget.blur()}
-      className={
-        cn(
-          "[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none",
-          "focus:outline-0 focus:ring-0 border-foreground border-b-2 py-1 font-playfair-display w-full", 
-          className
-        )
-      } 
-      {...props} 
-    />
+    <div className="input-wrapper">
+      <input
+        onWheel={(e) => e.currentTarget.blur()}
+        className={
+          cn("input",
+            className
+          )
+        } 
+        {...props} 
+      />
+    </div>
   )
 }
 export default Input
