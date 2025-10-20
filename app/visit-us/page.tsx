@@ -8,6 +8,11 @@ import Image from "next/image"
 import { ChangeEvent, useState } from "react"
 import { toast } from "sonner"
 
+import dynamic from 'next/dynamic'
+
+// Dynamically import Map component so it's only rendered on the client
+const Map = dynamic(() => import('@/components/LeafletMap'), { ssr: false })
+
 const Page = () => {
   const [form, setForm] = useState({
     name: "",
@@ -91,10 +96,13 @@ const Page = () => {
 
           {/* Contact Info */}
           <div className="flex-[1] flex flex-col gap-12 lg:gap-15 max-lg:py-25 lg:p-20 justify-center">
-            {GET_IN_TOUCH.map(( { description, ...imgInfo }, idx ) => (
+            {GET_IN_TOUCH.map(( { description, link, ...imgInfo }, idx ) => (
               <div
                 key={`${idx}-${imgInfo.alt}`}
-                className="flex gap-4 items-center"
+                className="flex gap-4 items-center hover:cursor-pointer"
+                onClick={() => {
+                  window.open(link, '_blank');
+                }}
               >
                 <div className="flex-[1] size-10 lg:size-12 flex justify-center items-center">
                   <Image
@@ -113,6 +121,10 @@ const Page = () => {
             }
           </div>
         </div>
+      </section>
+
+      <section className="visit-us-map">
+        <Map />
       </section>
     </>
   )

@@ -184,6 +184,10 @@
   .menu-main {
     @apply w-full flex flex-col justify-center items-center
   }
+
+  .menu-selections {
+    @apply w-full min-h-dvh
+  }
   
   .get-in-touch {
     @apply w-full min-h-dvh m-10
@@ -191,6 +195,10 @@
 
   .contact-us-form-label {
     @apply text-lg lg:text-xl font-bold font-playfair-display mb-2
+  }
+
+  .visit-us-map {
+    @apply w-full my-10 px-2 flex justify-center items-center
   }
 
   .text-shadow {

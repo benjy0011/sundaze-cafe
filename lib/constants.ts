@@ -4,6 +4,8 @@ import { ReviewCardSmallProps } from "@/components/ReviewCardSmall"
 import { TwoColMasonryItemProps } from "@/components/TwoColMasonry"
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
+
+export const SUNDAZE_MAP_COORDINATE: [number, number] = [2.9879198, 101.4547821];
 export const NAV_LINKS = [
   {
     name: "HOME",
@@ -239,20 +241,23 @@ export const GET_IN_TOUCH = [
     alt: "Phone number",
     width: 90,
     height: 90,
-    description: "+60 123 456 789"
+    description: "+60 123 456 789",
+    link: "https://web.whatsapp.com/"
   },
   {
     src: "/contact-us-ig.png",
     alt: "Instagram",
     width: 92,
     height: 92,
-    description: "@sundaze.coffee"
+    description: "@sundaze.coffee",
+    link: "https://www.instagram.com/sundazecoffee_/reels/?hl=en"
   },
   {
     src: "/contact-us-location.png",
     alt: "Instagram",
     width: 72,
     height: 113,
-    description: "18, Jalan Ramin 3/KS7, Bandar Botanik, 41200 Klang, Selangor"
+    description: "18, Jalan Ramin 3/KS7, Bandar Botanik, 41200 Klang, Selangor",
+    link: "https://maps.app.goo.gl/qQM35MWnPEPtVQkf7"
   },
 ]
