@@ -75,8 +75,8 @@ export default function Home() {
 
     const tlReviews = gsap.timeline({
       scrollTrigger: {
-        trigger: "#reviews",
-        start: "top top",
+        trigger: "#big-review-div",
+        start: "top 30%",
       }
     });
 
@@ -214,7 +214,7 @@ export default function Home() {
 
       <CheckboxBanner />
 
-      <section id="reviews" className="reviews-section">
+      <section id="reviews-section" className="reviews-section">
         <div className="visual-section-h2-div pt-10 py-15 lg:pt-15 lg:py-20">
           <h2 className="visual-section-h2">
             REVIEWS
