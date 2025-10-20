@@ -232,3 +232,27 @@ export const MENU_MAIN_IMG = [
     text: "Desserts / Drinks",
   },
 ]
+
+export const GET_IN_TOUCH = [
+  {
+    src: "/contact-us-phone.png",
+    alt: "Phone number",
+    width: 90,
+    height: 90,
+    description: "+60 123 456 789"
+  },
+  {
+    src: "/contact-us-ig.png",
+    alt: "Instagram",
+    width: 92,
+    height: 92,
+    description: "@sundaze.coffee"
+  },
+  {
+    src: "/contact-us-location.png",
+    alt: "Instagram",
+    width: 72,
+    height: 113,
+    description: "18, Jalan Ramin 3/KS7, Bandar Botanik, 41200 Klang, Selangor"
+  },
+]

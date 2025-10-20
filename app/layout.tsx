@@ -3,6 +3,7 @@ import { Bagel_Fat_One, Playfair_Display, Nunito_Sans, Bebas_Neue, Montserrat } 
 import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import { Toaster } from "sonner";
 
 // Prevent Font Awesome from inserting its own <style> tag:
 config.autoAddCss = false
@@ -51,6 +52,7 @@ export default function RootLayout({
         className={`${bagelFatOne.variable} ${playfairDisplay.variable} ${nunitoSans.variable} ${bebasNeue.variable} ${montserrat.variable} antialiased`}
       >
         {children}
+        <Toaster theme="light" richColors position="top-center" />
       </body>
     </html>
   );
