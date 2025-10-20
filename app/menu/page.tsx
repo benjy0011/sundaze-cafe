@@ -1,6 +1,7 @@
 'use client'
 
 import LogoLoop from "@/components/LogoLoop"
+import MenuCatalogue from "@/components/MenuCatalogue";
 import Navbar from "@/components/Navbar"
 import { useWindowSize } from "@/hooks/useScreenSize";
 import { MENU_COFFEE, MENU_MAIN_IMG } from "@/lib/constants";
@@ -41,6 +42,11 @@ const Page = () => {
             </div>
           ))}
         </div>
+      </section>
+
+
+      <section id="menu-selections" className="menu-selections">
+        <MenuCatalogue />
       </section>
     </>
   )
