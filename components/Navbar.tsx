@@ -83,6 +83,7 @@ const Navbar = ({
           alt="logo"
           width={80}
           height={80}
+          className="w-auto h-[90px]"
         />
 
         {NAV_LINKS.map(({ name, href }, index) => (

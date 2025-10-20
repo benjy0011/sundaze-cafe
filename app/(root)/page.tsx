@@ -11,6 +11,7 @@ import { useWindowSize } from "@/hooks/useScreenSize";
 import ReviewCardBig from "@/components/ReviewCardBig";
 import ReviewCardSmall from "@/components/ReviewCardSmall";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -76,7 +77,7 @@ export default function Home() {
     const tlReviews = gsap.timeline({
       scrollTrigger: {
         trigger: "#big-review-div",
-        start: "top 30%",
+        start: "top 50%",
       }
     });
 
@@ -193,10 +194,11 @@ export default function Home() {
         <div id="signature-imgs" className="flex max-lg:flex-col flex-row max-lg:items-center justify-between mt-[7rem] mx-[5rem] gap-10">
           {SIGNATURES.map(( { src, alt }, index ) => (
             <div key={`${alt}-${index}`} className="flex-1">
-              <img
-                loading="lazy"
+              <Image
                 src={src}
                 alt={alt}
+                width={490}
+                height={598}
                 className="object-cover max-lg:w-[20rem] w-[100%] max-lg:h-[20rem] h-[100%] rounded-2xl"
               />
             </div>
