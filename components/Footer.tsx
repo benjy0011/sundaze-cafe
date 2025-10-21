@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="footer flex gap-5 lg:gap-10 justify-around py-6">
         <div className="flex h-full items-center justify-center">
           <Image
-            src="Sundaze-logo.png"
+            src="/Sundaze-logo.png"
             alt="Sundaze Logo"
             className="w-[20vw] h-[20vw] aspect-square"
             width={398}

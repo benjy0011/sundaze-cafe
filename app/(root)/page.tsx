@@ -112,12 +112,12 @@ export default function Home() {
       <section id="home-page" className="home-page">
         <div className="size-full relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-14">
-            <h1 id="home-page-h1" className="text-white max-sm:text-5xl max-md:text-6xl text-7xl text-center max-sm:leading-20 max-md:leading-22 leading-25">Savor the Moment <br /> In Every Ray of Light</h1>
+            <h1 id="home-page-h1" className="text-white max-sm:text-4xl max-md:text-6xl text-7xl text-center max-sm:leading-20 max-md:leading-22 leading-25">Savor the Moment <br /> In Every Ray of Light</h1>
 
             <Button
               className="font-playfair-display hover:cursor-pointer"
               variant="secondary"
-              size="xl"
+              size={isSmallScreen ? "lg" : "xl"}
               onClick={() => router.push('about-us')}
             >
               <p className="-mt-1 text-foreground">About Us</p>
@@ -240,7 +240,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div id="big-review-div" className="flex-1 max-lg:mx-15">
+          <div id="big-review-div" className="flex-1 max-lg:mx-5">
             <ReviewCardBig />
           </div>
         </div>
