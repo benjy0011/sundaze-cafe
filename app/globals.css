@@ -206,7 +206,8 @@
   }
 
   .tabs-trigger {
-    @apply font-bold text-base sm:text-lg lg:text-xl
+    /* @apply font-bold text-base sm:text-lg lg:text-xl */
+    @apply font-bold text-xl
   }
 
   .input-wrapper {
@@ -221,6 +222,11 @@
 
   .textfield {
     @apply focus:outline-0 resize-none w-full font-playfair-display
+  }
+
+  .menu-tab-list {
+    /* @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-0 place-content-center place-items-center */
+    @apply grid gap-y-5 md:gap-y-10 lg:gap-y-20 grid-cols-[repeat(auto-fit,minmax(220px,1fr))] place-items-center py-10
   }
 
   /* Animation */
