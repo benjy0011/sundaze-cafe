@@ -130,10 +130,12 @@ export default function Home() {
       
       <section id="intro" className="intro-section">
         <div id="intro-img-div" className="h-full max-lg:flex-[0.5] flex-[1] max-lg:p-10">
-          <img
+          <Image
             className="w-full h-full object-cover rounded-xl"
             src="/Info-img.jpg"
             alt="Info"
+            width={676}
+            height={862}
           />
         </div>
 
@@ -146,16 +148,20 @@ export default function Home() {
             </article>
 
             <div id="intro-food-img" className="flex-1 flex w-full h-full justify-between items-end overflow-hidden z-1 max-lg:px-12">
-              <img
+              <Image
                 src="/Info-plate.png"
                 alt="Plate"
                 className="h-[15vw] lg:h-[8vw] w-auto"
+                width={275}
+                height={140}
               />
 
-              <img
+              <Image
                 src="/Info-bread.png"
                 alt="Bread"
                 className="h-[10vw] lg:h-[6vw] w-auto rotate-10 translate-x-7 max-lg:translate-x-1 -translate-y-10 max-lg:-translate-y-5"
+                width={313}
+                height={91}
               />
             </div>
           </div>
@@ -185,10 +191,12 @@ export default function Home() {
           </h2>
         </div>
 
-        <img
+        <Image
           src="/star-3.png"
           alt="decoration-star"
           className="absolute right-[15rem] max-lg:right-[2rem] max-lg:size-15 -rotate-16 -translate-y-8"
+          width={138}
+          height={98}
         />
 
         <div id="signature-imgs" className="flex max-lg:flex-col flex-row max-lg:items-center justify-between mt-[7rem] mx-[5rem] gap-10">
@@ -206,10 +214,12 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-start mt-15 mb-20 max-lg:h-10">
-          <img
+          <Image
             src="/star-1.png"
             alt="decoration-star"
             className="px-20 rotate-160"
+            height={82}
+            width={132}
           />
         </div>
       </section>

@@ -29,8 +29,8 @@ const TwoColMasonry = ({
     let rightHeight = 0;
     let leftHeight = 0;
 
-    let rightItems:TwoColMasonryItemProps[] = [];
-    let leftItems:TwoColMasonryItemProps[] = [];
+    const rightItems:TwoColMasonryItemProps[] = [];
+    const leftItems:TwoColMasonryItemProps[] = [];
 
     items.forEach(item => {
       if (leftHeight <= rightHeight) {

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Rating, RatingButton } from "./ui/shadcn-io/rating"
 
 const ReviewCardBig = ({
@@ -5,10 +6,12 @@ const ReviewCardBig = ({
 }) => {
   return (
     <div className="w-full max-lg:h-50 h-100 bg-custom-brown rounded-xl flex p-4 gap-2">
-      <img
+      <Image
         src="/review-1.jpg"
         alt="review"
         className="object-cover rounded-lg max-lg:w-[40vw]"
+        height={470}
+        width={391}
       />
 
       <div className="flex flex-col h-full w-full justify-center p-2 max-lg:5 lg:gap-10">

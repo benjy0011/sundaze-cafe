@@ -2,16 +2,19 @@ import { NAV_LINKS, SOCIAL_MEDIA } from "@/lib/constants"
 import Link from "next/link"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from "next/image"
 
 const Footer = () => {
   return (
     <>
       <footer className="footer flex gap-5 lg:gap-10 justify-around py-6">
         <div className="flex h-full items-center justify-center">
-          <img
+          <Image
             src="Sundaze-logo.png"
             alt="Sundaze Logo"
             className="w-[20vw] h-[20vw] aspect-square"
+            width={398}
+            height={296}
           />
         </div>
 

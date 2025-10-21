@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { Rating, RatingButton } from "./ui/shadcn-io/rating"
 
 export interface ReviewCardSmallProps {
@@ -32,10 +33,12 @@ const ReviewCardSmall = ({
       </div>
 
       <div className="h-full">
-        <img
+        <Image
           src={src}
           alt={alt}
           className="h-full w-auto"
+          width={141}
+          height={129}
         />
       </div>
     </div>
