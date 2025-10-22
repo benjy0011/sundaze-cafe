@@ -27,13 +27,17 @@ const Navbar = ({
     xs
     ? (
       <nav className={cn("z-1 flex w-full border-b-2 justify-between", mode==="dark" && "border-foreground", absolute && "absolute")} >
-        <Image 
-          src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
-          alt="logo"
-          width={70}
-          height={70}
-          className="ml-4"
-        />
+        <Link
+          href="/"
+        >
+          <Image 
+            src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
+            alt="logo"
+            width={70}
+            height={70}
+            className="ml-4"
+          />
+        </Link>
 
         <Drawer.Root direction="right">
           <Drawer.Trigger asChild>
@@ -78,13 +82,17 @@ const Navbar = ({
       </nav>
     ) : (
       <nav className={cn("font-playfair-display z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18", mode==="dark" && "border-foreground", absolute && "absolute" )}>
-        <Image 
-          src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
-          alt="logo"
-          width={80}
-          height={80}
-          className="w-auto h-[90px]"
-        />
+        <Link
+          href="/"
+        >
+          <Image 
+            src={mode === "light" ? "/Sundaze-logo.png" : "/Sundaze-logo-dark.png"}
+            alt="logo"
+            width={80}
+            height={80}
+            className="w-auto h-[90px]"
+          />
+        </Link>
 
         {NAV_LINKS.map(({ name, href }, index) => (
           <Link
