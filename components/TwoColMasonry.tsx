@@ -51,6 +51,8 @@ const TwoColMasonry = ({
       scrollTrigger: {
         trigger: "#two-col-masonry",
         start: "top 50%",
+        end: "bottom bottom",
+        scrub: 1.5
       }
     });
 
@@ -70,7 +72,7 @@ const TwoColMasonry = ({
         opacity: 0,
         y: "80%",
         ease: "power2.out",
-        duration: 1.2,
+        duration: 0.8,
       }, i * 0.3); // stagger by row
     }
   }, [rightCol, leftCol])

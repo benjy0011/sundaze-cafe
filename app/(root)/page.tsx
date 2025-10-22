@@ -57,18 +57,20 @@ export default function Home() {
     const tlSignatureImages = gsap.timeline({
       scrollTrigger: {
         trigger: "#signature-imgs",
-        start: "top 55%",
+        start: "top 60%",
+        end: "top 25%",
+        scrub: 1.5,
       }
     });
 
     tlSignatureImages.from( "#signature-imgs img" , {
       opacity: 0,
-      y: 40,
-      duration: 0.8,
+      y: "30%",
+      duration: 1.5,
       ease: 'power2.inOut',
       stagger: {
-        each: 0.25,
-        ease: "power1.out",
+        each: 0.3,
+        ease: "power1.inOut",
         from: "start"
       },
     });
@@ -76,8 +78,11 @@ export default function Home() {
 
     const tlReviews = gsap.timeline({
       scrollTrigger: {
-        trigger: "#big-review-div",
-        start: "top 50%",
+        trigger: "#reviews-section",
+        start: "top top",
+        end: "bottom 50%",
+        scrub: 1.5,
+        pin: true
       }
     });
 
@@ -85,16 +90,16 @@ export default function Home() {
       .from("#big-review-div > *", {
         x: "100%",
         opacity: 0,
-        duration: 0.6,
-        ease: "power1.in"
+        duration: 8,
+        ease: "power1.inOut"
       })
       .from("#small-review-div > *", {
-        y: "50%",
+        y: "100%",
         opacity: 0,
-        duration: 0.6,
-        ease: "power2.inOut",
-        stagger: 0.05,
-        delay: 0.02,
+        duration: 8,
+        ease: "power1.inOut",
+        stagger: 3,
+        delay: 2,
       })
 
     const handleLoad = () => ScrollTrigger.refresh();
