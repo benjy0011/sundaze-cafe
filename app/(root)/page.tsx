@@ -12,8 +12,8 @@ import ReviewCardBig from "@/components/ReviewCardBig";
 import ReviewCardSmall from "@/components/ReviewCardSmall";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import ShinyText from "@/components/ShinyText";
 import { useState } from "react";
+import GlowingText from "@/components/GlowingText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -43,7 +43,7 @@ export default function Home() {
       stagger: 0.05
     });
 
-    tlHomePage.from(".animate-shine", {
+    tlHomePage.from(".glowing-text", {
       opacity: 0,
       duration: 1,
       ease: "power2.out",
@@ -131,7 +131,8 @@ export default function Home() {
               <span id="home-page-h1-main">
                 Savor the Moment <br /> In Every Ray of
               </span>{" "}
-              <ShinyText text="Light" speed={3} />
+              {/* <ShinyText text="Light" speed={3} /> */}
+              <span className="glowing-text"><GlowingText text="Light" color="#FFF" /></span>
             </h1>
 
             <Button
