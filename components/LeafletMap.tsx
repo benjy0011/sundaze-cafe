@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { SUNDAZE_MAP_COORDINATE } from '@/lib/constants'
+import Image from 'next/image'
 
 // Fix marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl
@@ -25,7 +26,17 @@ const LeafletMap = () => {
         />
         <Marker position={position}>
           <Popup>
-            Sundaze Coffee! ☕
+            <div className="flex items-center gap-2">
+              <Image
+                src={"/Sundaze-logo-dark.png"}
+                alt="logo"
+                width={80}
+                height={80}
+                className="w-[50px] h-[50px]"
+              />
+
+              <h6>Sundaze Coffee! ☕</h6>
+            </div>
           </Popup>
         </Marker>
       </MapContainer>

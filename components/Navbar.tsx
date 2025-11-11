@@ -81,7 +81,7 @@ const Navbar = ({
 
       </nav>
     ) : (
-      <nav className={cn("font-playfair-display z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18", mode==="dark" && "border-foreground", absolute && "absolute" )}>
+      <nav className={cn("font-sans z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18", mode==="dark" && "border-foreground", absolute && "absolute" )}>
         <Link
           href="/"
         >

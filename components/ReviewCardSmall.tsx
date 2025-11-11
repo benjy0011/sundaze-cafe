@@ -2,12 +2,19 @@
 
 import Image from "next/image"
 import { Rating, RatingButton } from "./ui/shadcn-io/rating"
+import { cn } from "@/lib/utils"
 
 export interface ReviewCardSmallProps {
   src: string
   alt: string
   name: string
   rating: number
+  comment?: string
+  isSelected?: boolean
+}
+
+export interface ReviewCardSmallPropsFunctional extends ReviewCardSmallProps {
+  onClick?: () => void
 }
 
 const ReviewCardSmall = ({
@@ -15,11 +22,13 @@ const ReviewCardSmall = ({
   alt,
   name,
   rating,
-}: ReviewCardSmallProps) => {
+  isSelected = false,
+  onClick
+}: ReviewCardSmallPropsFunctional) => {
   const realRating = Math.min(5, rating);
 
   return (
-    <div className="bg-custom-brown mx-15 lg:mx-25 rounded-2xl flex overflow-hidden h-30">
+    <div className={cn("bg-custom-brown mx-15 lg:mx-25 rounded-2xl flex overflow-hidden h-30 transition-shadow cursor-pointer hover:shadow-md", isSelected && "ring-1")} onClick={onClick}>
       <div className="flex flex-col gap-1 justify-center flex-1 p-4">
         <h6 className="review-card-h6 mt-2">
           FROM: {name.toUpperCase()}

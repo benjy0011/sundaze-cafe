@@ -77,20 +77,24 @@ export const SMALL_REVIEWS: ReviewCardSmallProps[] = [
     alt: "review",
     name: "ALEXY",
     rating: 5,
+    comment: "Comfort food with a premium touch — every dish feels made with love.",
   },
   {
     src: "/review-1.jpg",
     alt: "review",
-    name: "ALEXY",
+    name: "MARCUS",
     rating: 4,
+    comment: "Cozy atmosphere and friendly staff. The desserts were especially good!",
   },
   {
     src: "/review-1.jpg",
     alt: "review",
-    name: "ALEXY",
+    name: "ISABELLE",
     rating: 4,
+    comment: "Great flavors and presentation. Would love slightly faster service next time.",
   },
-]
+];
+
 
 export const SOCIAL_MEDIA = [
   {

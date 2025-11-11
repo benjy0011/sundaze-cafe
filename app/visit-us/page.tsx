@@ -97,7 +97,7 @@ const Page = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex-[1] flex flex-col gap-12 lg:gap-15 max-lg:py-25 lg:p-20 justify-center">
+          <div className="flex-[1] flex flex-col gap-12 lg:gap-15 max-lg:py-25 lg:p-20">
             {GET_IN_TOUCH.map(( { description, link, ...imgInfo }, idx ) => (
               <div
                 key={`${idx}-${imgInfo.alt}`}
@@ -121,11 +121,15 @@ const Page = () => {
             ))
 
             }
+
+            <div className="max-lg:hidden">
+              <Map />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="visit-us-map">
+      <section className="w-full my-10 px-2 flex justify-center items-center lg:hidden">
         <Map />
       </section>
     </>

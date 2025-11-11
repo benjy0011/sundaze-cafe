@@ -12,6 +12,8 @@ import ReviewCardBig from "@/components/ReviewCardBig";
 import ReviewCardSmall from "@/components/ReviewCardSmall";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import ShinyText from "@/components/ShinyText";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,8 +23,11 @@ export default function Home() {
 
   const router = useRouter();
 
+  const [ selectedReviewIndex, setSelectedReviewIndex ] = useState<number>(0);
+  const selectedReview = SMALL_REVIEWS[selectedReviewIndex];
+
   useGSAP(() => {
-    const homePageh1 = new SplitText("#home-page-h1", { type: "chars" });
+    const homePageh1 = new SplitText("#home-page-h1-main", { type: "chars" });
 
     const tlHomePage = gsap.timeline({
       scrollTrigger: {
@@ -38,6 +43,11 @@ export default function Home() {
       stagger: 0.05
     });
 
+    tlHomePage.from(".animate-shine", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+    }, "-=0.4");
 
     const tlIntro = gsap.timeline({
       scrollTrigger: {
@@ -117,7 +127,12 @@ export default function Home() {
       <section id="home-page" className="home-page">
         <div className="size-full relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-14">
-            <h1 id="home-page-h1" className="text-white max-sm:text-4xl max-md:text-6xl text-7xl text-center max-sm:leading-20 max-md:leading-22 leading-25">Savor the Moment <br /> In Every Ray of Light</h1>
+            <h1 id="home-page-h1" className="text-white text-center max-sm:text-4xl max-md:text-6xl text-7xl max-sm:leading-20 max-md:leading-22 leading-25">
+              <span id="home-page-h1-main">
+                Savor the Moment <br /> In Every Ray of
+              </span>{" "}
+              <ShinyText text="Light" speed={3} />
+            </h1>
 
             <Button
               className="font-playfair-display hover:cursor-pointer"
@@ -241,12 +256,12 @@ export default function Home() {
         <div className="flex max-lg:flex-col-reverse max-lg:gap-5">
           <div id="small-review-div" className="flex-1 flex flex-col gap-4 justify-between">
             {SMALL_REVIEWS.slice(0, 3).map(( review, idx) => (
-              <ReviewCardSmall key={`${review.name}-${idx}`} {...review} />
+              <ReviewCardSmall key={`${review.name}-${idx}`} onClick={() => setSelectedReviewIndex(idx)} isSelected={idx === selectedReviewIndex} {...review} />
             ))}
           </div>
 
           <div id="big-review-div" className="flex-1 max-lg:mx-5">
-            <ReviewCardBig />
+            <ReviewCardBig author={selectedReview.name} rating={selectedReview.rating} comment={selectedReview.comment ?? ""} />
           </div>
         </div>
       </section>

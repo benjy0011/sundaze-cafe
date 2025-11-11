@@ -59,21 +59,21 @@ const Page = () => {
               height={800}
               alt="Sundaze Store"
               src="/Sundaze-shoplot.jpg"
-              className="object-cover w-120 h-60 lg:w-160 lg:h-90 rounded-2xl lg:float-right lg:ml-4 mb-2 appear-onload"
+              className="object-cover w-120 h-60 lg:w-160 lg:h-90 rounded-2xl lg:float-right lg:ml-4 mb-2 appear-onload justify-self-center"
             />
             <h1 className="text-2xl lg:text-4xl text-left w-full mb-4 font-bagel-fat-one font-normal appear-onload">About Us</h1>
 
             <p className="appear-onload"><i>Sundaze Coffee</i>, founded in Bandar Botanik, Klang, was created as a cozy space for people to slow down, connect, and enjoy life’s little moments.</p>
             
+            <p className="mt-2 lg:mt-3 appear-onload relative">Inspired by calm Sunday mornings, it blends minimalist design, natural light, and artisanal flavors for a gentle escape from the city.</p>
+
             <Image
               src="/Info-corissant.png"
               alt="corissant outlined"
               height={100}
               width={180}
-              className="w-30 lg:w-35 h-auto rotate-10 float-right -translate-y-2 appear-onload"
+              className="w-25 lg:w-30 h-auto rotate-10 float-right -translate-x-10 mt-2 appear-onload right-100"
             />
-            
-            <p className="mt-10 lg:mt-15 appear-onload">Inspired by calm Sunday mornings, it blends minimalist design, natural light, and artisanal flavors for a gentle escape from the city.</p>
           </article>
 
         </div>
