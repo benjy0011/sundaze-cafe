@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
       id="scroll-to-top-btn"
       size="icon-lg"
       className={cn(
-        "fixed bottom-3 right-3 bg-custom-dark-brown mix-blend-luminosity p-4 rounded-full border-secondary border-2 transition-transform duration-500 animate-bounce hover:cursor-pointer hover:paused",
+        "fixed bottom-3 right-3 bg-custom-dark-brown mix-blend-luminosity p-4 rounded-full border-secondary border-2 transition-transform duration-500 animate-bounce hover:cursor-pointer hover:paused z-50",
         scrollY >= 100 ? "translate-y-0" : "translate-y-100"
       )}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
