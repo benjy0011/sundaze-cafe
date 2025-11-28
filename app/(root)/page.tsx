@@ -161,10 +161,10 @@ export default function Home() {
         </div>
 
         <div className="h-full flex-[1] relative max-lg:py-2">
-          <div className="h-full flex flex-col items-start justify-center max-lg:gap-10 gap-0">
+          <div className="h-full flex flex-col items-start justify-center max-lg:gap-9 gap-0">
             <h2 id="intro-title" className="max-lg:text-3xl text-[min(4vw,3.5rem)] font-playfair-display font-bold max-lg:px-12 px-18 lg:pt-[15vh] lg:pb-[10vh]">Sundaze Coffee</h2>
 
-            <article id="intro-description" className="font-normal font-nunito-sans italic max-lg:text-lg text-[min(2vw,1.7rem)] max-lg:px-12 px-18">
+            <article id="intro-description" className="font-normal font-nunito-sans italic lg:text-[min(2vw,1.5rem)] max-lg:px-12 px-18">
               Nestled in the heart of Klang, Sundaze Coffee is a cozy hideaway where minimalist design meets comforting flavors. From artisanal coffee to hearty brunches, every visit is a warm, sunlit escape made for slowing down and savoring the moment.”
             </article>
 
