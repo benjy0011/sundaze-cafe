@@ -164,7 +164,7 @@ export default function Home() {
           <div className="h-full flex flex-col items-start justify-center max-lg:gap-10 gap-0">
             <h2 id="intro-title" className="max-lg:text-3xl text-[min(4vw,3.5rem)] font-playfair-display font-bold max-lg:px-12 px-18 lg:pt-[15vh] lg:pb-[10vh]">Sundaze Coffee</h2>
 
-            <article id="intro-description" className="font-normal font-nunito-sans italic max-lg:text-xl text-[min(2vw,1.7rem)] max-lg:px-12 px-18">
+            <article id="intro-description" className="font-normal font-nunito-sans italic max-lg:text-lg text-[min(2vw,1.7rem)] max-lg:px-12 px-18">
               Nestled in the heart of Klang, Sundaze Coffee is a cozy hideaway where minimalist design meets comforting flavors. From artisanal coffee to hearty brunches, every visit is a warm, sunlit escape made for slowing down and savoring the moment.”
             </article>
 
@@ -172,7 +172,7 @@ export default function Home() {
               <Image
                 src="/Info-plate.png"
                 alt="Plate"
-                className="h-[15vw] lg:h-[8vw] w-auto"
+                className="h-[10vw] lg:h-[7vw] w-auto"
                 width={275}
                 height={140}
               />
@@ -180,7 +180,7 @@ export default function Home() {
               <Image
                 src="/Info-bread.png"
                 alt="Bread"
-                className="h-[10vw] lg:h-[6vw] w-auto rotate-10 translate-x-7 max-lg:translate-x-1 -translate-y-10 max-lg:-translate-y-5"
+                className="h-[6vw] lg:h-[5vw] w-auto rotate-10 translate-x-0 max-lg:translate-x-1 -translate-y-10 max-lg:-translate-y-3.5"
                 width={313}
                 height={91}
               />
@@ -193,7 +193,7 @@ export default function Home() {
       <section id="visual" className="visual-section">
 
         <div className="visual-section-h2-div">
-          <h2 className="visual-section-h2 mt-10 lg:mt-15">
+          <h2 className="visual-section-h2 mt-10 lg:mt-15 mx-1">
             ENHANCING YOUR EXPERIENCE
           </h2>
         </div>
@@ -215,7 +215,7 @@ export default function Home() {
         <Image
           src="/star-3.png"
           alt="decoration-star"
-          className="absolute right-[15rem] max-lg:right-[2rem] max-lg:size-15 -rotate-16 -translate-y-8"
+          className="absolute right-[15rem] max-lg:right-[3rem] max-sm:right-[1rem] max-lg:size-15 max-md:size-12 -rotate-16 -translate-y-8"
           width={138}
           height={98}
         />

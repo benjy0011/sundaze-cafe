@@ -53,13 +53,13 @@ const Page = () => {
       <section id="about-us-intro" className="about-us-intro relative">
         <Navbar mode="dark" absolute={false} />
         <div className="max-lg:min-h-[80dvh] flex flex-col lg:justify-center items-center w-full h-full py-10 px-5 lg:px-30 lg:py-25 flex-1">
-          <article className="font-nunito-sans font-semibold text-lg lg:text-2xl leading-8 lg:leading-10">
+          <article className="font-nunito-sans font-semibold lg:text-xl leading-8 lg:leading-10">
             <Image
               width={1200}
               height={800}
               alt="Sundaze Store"
               src="/Sundaze-shoplot.jpg"
-              className="object-cover w-120 h-60 lg:w-160 lg:h-90 rounded-2xl lg:float-right lg:ml-4 mb-2 appear-onload justify-self-center"
+              className="object-cover w-120 h-60 lg:w-160 lg:h-90 rounded-2xl lg:float-right lg:ml-4 lg:mb-2 mb-6 appear-onload justify-self-center"
             />
             <h1 className="text-2xl lg:text-4xl text-left w-full mb-4 font-bagel-fat-one font-normal appear-onload">About Us</h1>
 
@@ -72,7 +72,7 @@ const Page = () => {
               alt="corissant outlined"
               height={100}
               width={180}
-              className="w-25 lg:w-30 h-auto rotate-10 float-right -translate-x-10 mt-2 appear-onload right-100"
+              className="w-22 lg:w-27 h-auto rotate-10 float-right -translate-x-10 mt-2 appear-onload right-100"
             />
           </article>
 

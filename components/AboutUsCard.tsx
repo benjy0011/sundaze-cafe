@@ -27,7 +27,7 @@ const AboutUsCard = ({
         {title}
       </h4>
 
-      <p className="text-left font-nunito-sans italic text-lg lg:text-xl">
+      <p className="text-left font-nunito-sans italic lg:text-lg">
         {description}
       </p>
     </div>

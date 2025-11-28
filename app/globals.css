@@ -225,8 +225,8 @@
   }
 
   .menu-tab-list {
-    /* @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-0 place-content-center place-items-center */
-    @apply grid gap-y-5 md:gap-y-10 lg:gap-y-20 grid-cols-[repeat(auto-fit,minmax(240px,1fr))] place-items-center py-10
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-20 max-sm:gap-y-10 gap-x-0 py-10 place-content-center place-items-center
+    /* @apply grid gap-y-5 md:gap-y-10 lg:gap-y-20 grid-cols-[repeat(auto-fit,minmax(240px,1fr))] place-items-center py-10 mx-0 */
   }
 
   /* Animation */

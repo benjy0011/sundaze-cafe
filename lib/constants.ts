@@ -224,6 +224,7 @@ export const MENU_COFFEE: LogoItem[] = [
 
 export const MENU_MAIN_IMG = [
   {
+    id: 1,
     src: "/menu-main-1.png",
     alt: "Big breakfast",
     width: 733,
@@ -231,6 +232,7 @@ export const MENU_MAIN_IMG = [
     text: "Brunch/ Dinner",
   },
   {
+    id: 2,
     src: "/menu-main-2.png",
     alt: "Croissants and coffee",
     width: 733,

@@ -5,11 +5,15 @@ import MenuCatalogue from "@/components/MenuCatalogue";
 import Navbar from "@/components/Navbar"
 import { useWindowSize } from "@/hooks/useScreenSize";
 import { MENU_COFFEE, MENU_MAIN_IMG } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 const Page = () => {
   const { xs, sm, md } = useWindowSize();
   const isSmallScreen = xs || sm ;
+
+  const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
     <>
@@ -26,14 +30,21 @@ const Page = () => {
         />
 
         <div className="w-full flex">
-          {MENU_MAIN_IMG.map(( { text, ...mainImg}, idx ) => (
+          {MENU_MAIN_IMG.map(( { text, id, ...mainImg}, idx ) => (
             <div key={`${mainImg.alt}-${idx}`} className="flex-1 h-[40vw] relative">
               <Image
                 {...mainImg}
                 className="h-full w-full object-cover"
+                id={id.toString()}
               />
 
-              <div className="absolute h-full w-full inset-0 flex justify-center items-center hover:bg-black/40 bg-blend-color transition-colors">
+              <div 
+                className={cn(
+                  "absolute h-full w-full inset-0 flex justify-center items-center hover:bg-black/50 bg-blend-color transition-colors hover:cursor-pointer",
+                  selectedId === id ? "bg-black/40" : ""
+                )}
+                onClick={() => setSelectedId(id)}
+              >
                 <h6 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl text-background font-bold text-shadow font-playfair-display">
                   {text}
                 </h6>
