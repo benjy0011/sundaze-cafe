@@ -38,7 +38,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Sundaze Cafe",
+  title: "Sundaze Coffee",
   description: "A freshly brewed coffee to start your day.",
 };
 
