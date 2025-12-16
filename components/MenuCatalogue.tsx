@@ -11,6 +11,25 @@ import { useWindowSize } from '@/hooks/useScreenSize';
 import { cn } from '@/lib/utils';
 
 
+const tabs = [
+  {
+    value: "breakfast-set",
+    label: "Breakfast Set",
+  },
+  {
+    value: "noodles",
+    label: "Noodles",
+  },
+  {
+    value: "rice",
+    label: "Rice",
+  },
+  {
+    value: "vegan",
+    label: "Vegan",
+  },
+]
+
 function getMenuGridWidth (
   xs: boolean,
   sm: boolean,
@@ -35,11 +54,10 @@ const MenuCatalogue = () => {
     <div className="flex w-full flex-col gap-6 items-center p-10">
       <Tabs className="flex w-full justify-center items-center" defaultValue="breakfast-set">
         <TabsList className="flex gap-2 lg:gap-15 justify-between font-playfair-display text-xl">
-          
-          <TabsTrigger className="tabs-trigger" value="breakfast-set">Breakfast Set</TabsTrigger>
-          <TabsTrigger className="tabs-trigger" value="noodles">Noodles</TabsTrigger>
-          <TabsTrigger className="tabs-trigger" value="rice">Rice</TabsTrigger>
-          <TabsTrigger className="tabs-trigger" value="vegan">Vegan</TabsTrigger>
+
+          {tabs.map(({ value, label }, idx) => (
+            <TabsTrigger className="tabs-trigger" value={value} key={`${label}-${idx}`} >{label}</TabsTrigger>
+          ))}
 
         </TabsList>
 

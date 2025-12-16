@@ -24,9 +24,10 @@ const Navbar = ({
   }
 
   return (
-    xs
-    ? (
-      <nav className={cn("z-1 flex w-full border-b-2 justify-between", mode==="dark" && "border-foreground", absolute && "absolute")} >
+    <>
+    {/* xs */}
+    {/* ? ( */}
+      <nav className={cn("z-1 flex w-full border-b-2 justify-between sm:hidden", mode==="dark" && "border-foreground", absolute && "absolute")} >
         <Link
           href="/"
         >
@@ -80,8 +81,8 @@ const Navbar = ({
         </Drawer.Root>
 
       </nav>
-    ) : (
-      <nav className={cn("font-sans z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18", mode==="dark" && "border-foreground", absolute && "absolute" )}>
+    {/* ) : ( */}
+      <nav className={cn("font-sans z-50 max-w-7xl border-b-2 w-full justify-self-center flex justify-center items-center max-md:gap-8 max-lg:gap-12 gap-18 max-sm:hidden", mode==="dark" && "border-foreground", absolute && "absolute" )}>
         <Link
           href="/"
         >
@@ -108,7 +109,8 @@ const Navbar = ({
           </Link>
         ))}
       </nav>
-    )
+    {/* ) */}
+    </>
   )
 }
 export default Navbar

@@ -207,7 +207,7 @@
 
   .tabs-trigger {
     /* @apply font-bold text-base sm:text-lg lg:text-xl */
-    @apply font-bold text-xl
+    @apply font-bold text-xl max-sm:text-base
   }
 
   .input-wrapper {
