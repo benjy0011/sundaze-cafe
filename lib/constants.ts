@@ -1,5 +1,6 @@
 import { AboutUsCardProps } from "@/components/AboutUsCard"
 import { LogoItem } from "@/components/LogoLoop"
+import { MenuCatalogueType } from "@/components/MenuCatalogue"
 import { ReviewCardSmallProps } from "@/components/ReviewCardSmall"
 import { TwoColMasonryItemProps } from "@/components/TwoColMasonry"
 import { faWhatsapp, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -240,6 +241,136 @@ export const MENU_MAIN_IMG = [
     text: "Desserts / Drinks",
   },
 ]
+
+
+// Menu Items
+export const BREAKFAST_MENU = [
+  {
+    id: 1,
+    src: "/breakfast/sundaze-big-breakfast.png",
+    name: "Sundaze Big Breakfast"
+  },
+  {
+    id: 2,
+    src: "/breakfast/streaky-bacon-french-toast.png",
+    name: "Streaky Bacon French Toast"
+  },
+]
+
+export const RICE_MENU = [
+  {
+    id: 1,
+    src: "/rice/bara-unagi-bowl.png",
+    name: "Bara Unagi Bowl"
+  },
+  {
+    id: 2,
+    src: "/rice/omurice.png",
+    name: "Omurice"
+  },
+  {
+    id: 3,
+    src: "/rice/agedashi-rice-bowl.png",
+    name: "Agedashi Rice Bowl"
+  },
+  {
+    id: 4,
+    src: "/rice/eggplant-katsu-rice.png",
+    name: "Egg Plant Katsu Rice",
+
+  },
+  {
+    id: 5,
+    src: "/rice/karaage-2.png",
+    name: "Karaage 2.0",
+  },
+  {
+    id: 6,
+    src: "/rice/signature-fried-chicken-nasi-lemak.png",
+    name: "Signature Fried Chicken Nasi Lemak",
+  },
+  {
+    id: 7,
+    src: "/rice/salmon-2.png",
+    name: "Salmon 2.0",
+  },
+  {
+    id: 8,
+    src: "/rice/salmon-avocado-bowl.png",
+    name: "Salmon Avocado Bowl",
+  },
+  {
+    id: 9,
+    src: "/rice/tamago-mentaiko-bowl.png",
+    name: "Tamago Mentaiko Bowl",
+  },
+  {
+    id: 10,
+    src: "/rice/otak-otak-nasi-lemak.png",
+    name: "Otak Otak Nasi Lemak",
+  },
+]
+
+export const PASTA_MENU = [
+  {
+    id: 1,
+    src: "/pastas/truffle-mushroom-bacon.png",
+    name: "Truffle Mushroom Bacon"
+  },
+  {
+    id: 2,
+    src: "/pastas/pork-arrabiata.png",
+    name: "Pork Arrabiata"
+  },
+  {
+    id: 3,
+    src: "/pastas/pumpkin-pesto-shrooms.png",
+    name: "Pumpkin Pesto Shrooms"
+  },
+]
+
+export const COFFEE_MENU = [
+  {
+    id: 1,
+    src: "/coffee/americano.png",
+    name: "Americano"
+  },
+  {
+    id: 2,
+    src: "/coffee/long-black.png",
+    name: "Long Black"
+  },
+]
+
+// MENU TABS(Category)
+export const brunchDinnerTabs: MenuCatalogueType[] = [
+  {
+    value: "breakfast-toast",
+    label: "Breakfast/Toast",
+    items: BREAKFAST_MENU,
+  },
+  {
+    value: "pastas",
+    label: "Pastas",
+    items: PASTA_MENU,
+  },
+  {
+    value: "rice",
+    label: "Rice",
+    items: RICE_MENU,
+  },
+]
+
+export const dessertDrinksTabs: MenuCatalogueType[] = [
+  {
+    value: "coffee",
+    label: "Coffee",
+    items: COFFEE_MENU,
+  },
+]
+
+
+
 
 export const GET_IN_TOUCH = [
   {

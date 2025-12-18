@@ -1,19 +1,26 @@
 'use client'
 
 import LogoLoop from "@/components/LogoLoop"
-import MenuCatalogue from "@/components/MenuCatalogue";
+import MenuCatalogue, { MenuCatalogueType } from "@/components/MenuCatalogue";
 import Navbar from "@/components/Navbar"
 import { useWindowSize } from "@/hooks/useScreenSize";
-import { MENU_COFFEE, MENU_MAIN_IMG } from "@/lib/constants";
+import { brunchDinnerTabs, dessertDrinksTabs, MENU_COFFEE, MENU_MAIN_IMG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
+
+
+const mapToMenu: Record<number, MenuCatalogueType[]> = {
+  1: brunchDinnerTabs,
+  2: dessertDrinksTabs
+}
+
 
 const Page = () => {
   const { xs, sm, md } = useWindowSize();
   const isSmallScreen = xs || sm ;
 
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [selectedId, setSelectedId] = useState<number>(1);
 
   return (
     <>
@@ -57,7 +64,7 @@ const Page = () => {
 
 
       <section id="menu-selections" className="menu-selections">
-        <MenuCatalogue />
+        <MenuCatalogue menus={mapToMenu[selectedId ?? 1]} />
       </section>
     </>
   )
