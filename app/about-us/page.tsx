@@ -52,7 +52,7 @@ const Page = () => {
     <>
       <section id="about-us-intro" className="about-us-intro relative">
         <Navbar mode="dark" absolute={false} />
-        <div className="max-lg:min-h-[80dvh] flex flex-col lg:justify-center items-center w-full h-full py-10 px-5 lg:px-30 lg:py-25 flex-1">
+        <div className="max-lg:min-h-[80dvh] flex flex-col lg:justify-center items-center w-full h-full py-10 px-5 lg:px-30 lg:py-25 flex-1 lg:max-w-350">
           <article className="font-nunito-sans font-semibold lg:text-xl leading-8 lg:leading-10">
             <Image
               width={1200}

@@ -262,7 +262,7 @@ export default function Home() {
           </div>
 
           <div id="big-review-div" className="flex-1 max-lg:mx-5">
-            <ReviewCardBig author={selectedReview.name} rating={selectedReview.rating} comment={selectedReview.comment ?? ""} />
+            <ReviewCardBig author={selectedReview.name} rating={selectedReview.rating} src={selectedReview.src} comment={selectedReview.comment ?? ""} />
           </div>
         </div>
       </section>

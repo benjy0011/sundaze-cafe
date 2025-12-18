@@ -7,13 +7,15 @@ import { useRef } from "react"
 export interface ReviewCardBigProps {
   rating: number,
   author: string,
-  comment: string
+  comment: string,
+  src: string,
 }
 
 const ReviewCardBig = ({
   rating,
   author,
-  comment
+  comment,
+  src,
 } : ReviewCardBigProps) => {
 
   useGSAP(() => {
@@ -37,9 +39,9 @@ const ReviewCardBig = ({
   return (
     <div className="w-full max-lg:h-50 h-100 bg-custom-brown rounded-xl flex p-4 gap-2">
       <Image
-        src="/review-1.jpg"
+        src={src}
         alt="review"
-        className="object-cover rounded-lg max-lg:w-[40vw] review-card-big-elements"
+        className="object-cover aspect-square h-full rounded-lg max-lg:w-[40vw] review-card-big-elements"
         height={470}
         width={391}
       />

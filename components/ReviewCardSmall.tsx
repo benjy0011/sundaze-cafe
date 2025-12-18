@@ -45,7 +45,7 @@ const ReviewCardSmall = ({
         <Image
           src={src}
           alt={alt}
-          className="h-full w-auto"
+          className="object-cover aspect-square h-full"
           width={141}
           height={129}
         />

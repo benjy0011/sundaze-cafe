@@ -229,6 +229,15 @@
     /* @apply grid gap-y-5 md:gap-y-10 lg:gap-y-20 grid-cols-[repeat(auto-fit,minmax(240px,1fr))] place-items-center py-10 mx-0 */
   }
 
+  /* .menu-tab-list {
+    @apply flex flex-wrap justify-center items-center gap-x-10 gap-y-20 max-sm:gap-y-10 max-sm:gap-x-5 py-10;
+  } */
+
+  /* Apply widths to the child items instead of the parent grid */
+  /* .menu-tab-list > * {
+    @apply w-full sm:w-1/2 lg:w-1/4;
+  } */
+
   /* Animation */
   .hover-underline {
     position: relative;

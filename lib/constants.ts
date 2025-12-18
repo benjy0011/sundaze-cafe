@@ -74,25 +74,25 @@ export const SIGNATURES = [
 
 export const SMALL_REVIEWS: ReviewCardSmallProps[] = [
   {
-    src: "/review-1.jpg",
+    src: "/reviews/review-1.jpg",
     alt: "review",
     name: "ALEXY",
     rating: 5,
     comment: "Comfort food with a premium touch — every dish feels made with love.",
   },
   {
-    src: "/review-1.jpg",
+    src: "/reviews/review-2.jpeg",
     alt: "review",
-    name: "MARCUS",
+    name: "AMY",
     rating: 4,
-    comment: "Cozy atmosphere and friendly staff. The desserts were especially good!",
+    comment: "Everything tastes thoughtfully prepared, from the coffee to the pastries.",
   },
   {
-    src: "/review-1.jpg",
+    src: "/reviews/review-3.jpeg",
     alt: "review",
-    name: "ISABELLE",
-    rating: 4,
-    comment: "Great flavors and presentation. Would love slightly faster service next time.",
+    name: "DANIEL",
+    rating: 5,
+    comment: "A perfect balance of good food, quality coffee, and relaxing vibes.",
   },
 ];
 
@@ -143,53 +143,65 @@ export const MISSION_VISION: AboutUsCardProps[] = [
 
 export const GALLERY_IMAGES: TwoColMasonryItemProps[] = [
   {
-    src: "/gallery-many-breads.png",
+    src: "/gallery/gallery-many-breads.png",
     alt: "Breads",
     width: 633,
     height: 456,
   },
   {
-    src: "/gallery-some-breads.png",
+    src: "/gallery/gallery-some-breads.png",
     alt: "Bread",
     width: 531,
     height: 280,
   },
   {
-    src: "/gallery-coffee.png",
+    src: "/gallery/gallery-coffee.png",
     alt: "Coffee",
     width: 529,
     height: 560,
   },
   {
-    src: "/gallery-barista-woman.png",
+    src: "/gallery/gallery-barista-woman.png",
     alt: "Barista",
     width: 633,
     height: 558,
   },
   {
-    src: "/gallery-christmas-deco.png",
-    alt: "Christmas Deco",
+    src: "/gallery/gallery-counter.png",
+    alt: "Counter",
     width: 529,
     height: 780,
   },
   {
-    src: "/gallery-some-breads.png",
-    alt: "Bread",
-    width: 653,
-    height: 279,
+    src: "/gallery/gallery-ads-board.png",
+    alt: "Ads Board",
+    width: 633,
+    height: 930,
   },
   {
-    src: "/gallery-barista-woman.png",
-    alt: "Barista",
-    width: 634,
-    height: 558,
+    src: "/gallery/gallery-dog.png",
+    alt: "Dog",
+    width: 529,
+    height: 780,
   },
-  // {
-  //   src: "/gallery-some-breads.png",
-  //   alt: "Bread",
-  //   width: 532,
-  //   height: 280,
-  // },
+  {
+    src: "/gallery/gallery-merchandise.png",
+    alt: "Gallery Merchandise",
+    width: 646,
+    height: 953,
+  },
+  {
+    src: "/gallery/gallery-store-outside.png",
+    alt: "Store",
+    width: 534,
+    height: 780,
+  },
+  {
+    src: "/gallery/gallery-cakes.png",
+    alt: "Cakes",
+    width: 633,
+    height: 933,
+  }
 ]
 
 export const MENU_COFFEE: LogoItem[] = [

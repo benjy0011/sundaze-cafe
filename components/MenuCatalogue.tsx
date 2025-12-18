@@ -77,7 +77,7 @@ const MenuCatalogue = ({
 
         <TabsContents className={cn("py-6 h-full", getMenuGridWidth(xs, sm, md, lg))}>
           {menuTabs.map(({ value, label, items  }, idx) => (
-            <TabsContent value={value} key={`${label}-${idx}`} className="menu-tab-list">
+            <TabsContent value={value} key={`${label}-${idx}`} className={ cn("menu-tab-list")}>
               {items.map(( { id, name, src }, idx) => (
                 <MenuCard key={idx} src={src} name={name} />
               ))}
