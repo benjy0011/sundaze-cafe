@@ -136,7 +136,7 @@
 
 @layer utilities {
   .home-page {
-    @apply w-full h-dvh min-h-[30rem] bg-[url("/Home-bg.jpg")] bg-cover bg-no-repeat bg-center bg-black/60 bg-blend-overlay;
+    @apply w-full h-dvh min-h-[30rem] bg-[url("/Home-bg.webp")] bg-cover bg-no-repeat bg-center bg-black/60 bg-blend-overlay;
   }
 
   .intro-section {
