@@ -37,7 +37,7 @@ const MenuCard = ({
         </DialogTitle>
 
             <Image
-              src="/signature-rice.jpg"
+              src={src}
               alt="menu item"
               width={290}
               height={300}
