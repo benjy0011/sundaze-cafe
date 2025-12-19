@@ -264,8 +264,18 @@ export const BREAKFAST_MENU = [
   },
   {
     id: 2,
-    src: "/breakfast/streaky-bacon-french-toast.png",
-    name: "Streaky Bacon French Toast"
+    src: "/breakfast/sweet-potato-quinoa-salad.png",
+    name: "Sweet Potato Quinoa Salad"
+  },
+  {
+    id: 3,
+    src: "/breakfast/chashu-banh-mi.png",
+    name: "Chashu Banh Mi"
+  },
+  {
+    id: 4,
+    src: "/breakfast/pesto-avo-shrimp-toast.png",
+    name: "Pesto Avo Shrimp Toast"
   },
 ]
 
@@ -326,8 +336,8 @@ export const RICE_MENU = [
 export const PASTA_MENU = [
   {
     id: 1,
-    src: "/pastas/truffle-mushroom-bacon.png",
-    name: "Truffle Mushroom Bacon"
+    src: "/pastas/truffle-mushroom-pasta.png",
+    name: "Truffle Mushroom"
   },
   {
     id: 2,
@@ -338,6 +348,11 @@ export const PASTA_MENU = [
     id: 3,
     src: "/pastas/pumpkin-pesto-shrooms.png",
     name: "Pumpkin Pesto Shrooms"
+  },
+  {
+    id: 4,
+    src: "/pastas/grilled-salmon-pesto.png",
+    name: "Grilled Salmon Pesto"
   },
 ]
 
@@ -357,8 +372,8 @@ export const COFFEE_MENU = [
 // MENU TABS(Category)
 export const brunchDinnerTabs: MenuCatalogueType[] = [
   {
-    value: "breakfast-toast",
-    label: "Breakfast/Toast",
+    value: "breakfast",
+    label: "Breakfast",
     items: BREAKFAST_MENU,
   },
   {
